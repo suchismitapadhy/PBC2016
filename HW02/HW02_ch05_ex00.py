@@ -1,33 +1,31 @@
-#!/usr/bin/env python
-# HW02_ch05_ex00 (See 5.9)
+def do_twice(f):
+    f()
+    f()
 
-# Write a function called do_n that takes a function object and a number, n, as 
-# arguments, and that calls the given function n times.
+def do_four(f):
+    do_twice(f)
+    do_twice(f)
 
-################################################################################
-# Write your functions below:
-# Body
+def print_beam():
+    print('+ - - - -', end=' ')
 
+def print_post():
+    print('|        ', end=' ')
 
+def print_beams():
+    do_twice(print_beam)
+    print('+')
 
+def print_posts():
+    do_twice(print_post)
+    print('|')
 
+def print_row():
+    print_beams()
+    do_four(print_posts)
 
+def print_grid():
+    do_twice(print_row)
+    print_beams()
 
-
-
-
-# Write your functions above:
-def print_hello():
-    print("Hello World")
-################################################################################
-def main():
-    """Call your function within this function.
-    When complete have one function call in this function:
-    do_n(print_hello, 10)
-    """
-    print_hello() # replace this with do_n(print_hello, 10)
-
-
-
-if __name__ == "__main__":
-    main()
+print_grid()

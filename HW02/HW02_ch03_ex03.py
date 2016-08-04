@@ -40,13 +40,77 @@
 # Write your functions below:
 # Body
 
+def do_four(funcName,symbol):
+	funcName(symbol)
+	funcName(symbol)
+	funcName(symbol)
+	funcName(symbol)
+
+def printSymbols(symbol):
+	print(symbol,end=' ')	
+
+def do_twice(funcName):
+	funcName()
+	funcName()
+
+def RowContent():
+	do_four(printSymbols,"-")
+	print("+",end=' ')
+	do_four(printSymbols,"-")
+	print("+",end=' ')
+
+
+def printRow2():
+	print("+",end=' ')
+	RowContent()
+	print()
+
+def printRow4():
+	print("+",end=' ')
+	do_twice(RowContent)
+	print()
+	
+def bodyContent():
+	do_four(printSymbols," ")
+	print("|",end=' ')
+	do_four(printSymbols," ")
+	print("|",end=' ')
+
+def printBody2(symbol):
+	print("|",end=' ')
+	bodyContent()
+	print()
+
+def printBody4(symbol):
+	print("|",end=' ')
+	do_twice(bodyContent)
+	print()
+
+def innerBlock(d):
+	printBody(d)
+	printBody(d)
+	print()
+	
 
 
 
-
-
-
-
+def two_by_two():
+	printRow2()
+	do_four(printBody2,"")
+	printRow2()
+	do_four(printBody2,"")
+	printRow2()
+	
+def four_by_four():
+	printRow4()
+	do_four(printBody4,"")
+	printRow4()
+	do_four(printBody4,"")
+	printRow4()
+	do_four(printBody4,"")
+	printRow4()
+	do_four(printBody4,"")
+	printRow4()
 
 
 
@@ -60,6 +124,8 @@ def main():
     four_by_four()
     """
     print("Hello World!")
+    two_by_two()
+    four_by_four()
     
 
 
