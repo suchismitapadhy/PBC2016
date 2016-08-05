@@ -84,6 +84,8 @@ def is_palindrome(str_arg):
 # When you submit only include your final function: is_power
 
 def is_power(a,b):
+    if a<=0:
+        return False
     if a == 1:
         return True
     else:
