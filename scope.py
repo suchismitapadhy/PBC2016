@@ -12,16 +12,16 @@ def ex1():
 
 
 # Example 2
-# def ex2():
-#     if False:
-#         x = 1
-#     print(x, "{}".format("ex2"))
+def ex2():
+    if False:
+        x = 1
+    print(x, "{}".format("ex2"))
 
 
 def main():
     """Call your functions within this function."""
     ex1()
-    # ex2()
+    ex2()
 
 if __name__ == "__main__":
     main()
