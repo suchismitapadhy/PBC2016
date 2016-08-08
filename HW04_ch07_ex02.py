@@ -22,14 +22,29 @@
 ###############################################################################
 # Imports
 
-
+import math
 # Body
+def eval_loop():
+	expression_result="No expression evaluated yet"
+	while True:
+		expression = input("Enter an expression: ")
+		try:
+			if expression == "done":
+				return expression_result
+			expression_result = eval(expression)
+			print(expression_result)
+		except:
+			print("Invalid expression. Try again!")
+
+
+
 
 
 ###############################################################################
 def main():
-    pass  # Remove this line and uncomment below once eval_loop is defined.
-    # eval_loop()
+     # Remove this line and uncomment below once eval_loop is defined.
+    final_result = eval_loop()
+    print(final_result)
 
 if __name__ == '__main__':
     main()

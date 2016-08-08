@@ -14,6 +14,24 @@
 
 
 # Body
+import random
+def guess():
+	number=random.randint(1,25)
+	for i in range(5):
+		try:
+			my_number=int(input("Enter a number:"))
+			if my_number==number:
+				print("your guess was right")
+				return
+			elif my_number<number:
+				print("your number is low")
+				
+			else:
+				print("your number is high")
+		except:
+			print("Nice try. please enter a valid number")
+
+				
 
 
 
@@ -22,7 +40,7 @@
 def main():
 
 
-    print("Hello World!") # Remove this and replace with your function calls
+    guess() # Remove this and replace with your function calls
     
 
 if __name__ == '__main__':
