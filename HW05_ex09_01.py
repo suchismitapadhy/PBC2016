@@ -8,10 +8,17 @@
 
 # Body
 
+def read_file():
+	f = open('words.txt')
+	l=f.readlines()
+	for word in l:
+		if len(word)>20:
+			print(word.strip('\n'))
+
 
 ##############################################################################
 def main():
-    pass  # Call your functions here.
+	read_file()      # Call your functions here.
 
 if __name__ == '__main__':
     main()
