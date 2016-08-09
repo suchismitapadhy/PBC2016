@@ -9,11 +9,11 @@
 # Body
 
 def read_file():
-	f = open('words.txt')
-	l=f.readlines()
-	for word in l:
-		if len(word)>20:
-			print(word.strip('\n'))
+	with open('words.txt') as f:
+		l=f.readlines()
+		for word in l:
+			if len(word)>20:
+				print(word.strip('\n'))
 
 
 ##############################################################################
