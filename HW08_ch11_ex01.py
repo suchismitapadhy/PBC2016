@@ -10,7 +10,12 @@
 
 # Body
 def store_to_dict():
-    pass
+	words_dict={}
+	with open("words.txt","r") as fh:
+		wordlist=fh.readlines()
+		for word in wordlist:
+			words_dict[word.strip()]="xyz"
+	return words_dict
 
 
 ###############################################################################
